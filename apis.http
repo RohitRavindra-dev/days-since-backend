@@ -1,0 +1,15 @@
+'http://localhost:8080/api/goals/list'
+
+
+DELETE 'http://localhost:8080/api/goals/delete' \
+--header 'Content-Type: application/json' \
+--data '{
+    "goalId":"1234"
+}'
+
+
+PUT 'localhost:8080/api/goals/add' \
+--header 'Content-Type: application/json' \
+--data '{
+    "goalId":"1234"
+}'
