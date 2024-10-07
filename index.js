@@ -1,7 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
 require("dotenv").config();
+const setupUpdateStreakCron = require("./crons/goalCrons");
+
+const app = express();
 
 mongoose.connect(process.env.CONNECTION_STRING);
 const database = mongoose.connection;
@@ -13,6 +15,8 @@ database.on("error", (error) => {
 database.once("connected", () => {
   console.log("Database Connected");
 });
+
+setupUpdateStreakCron();
 
 const goalsRoutes = require("./routes/goals");
 const managementRoutes = require("./routes/management");
