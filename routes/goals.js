@@ -1,7 +1,6 @@
 const crypto = require("crypto");
 const router = require("express").Router();
 const Goal = require("../models/goal");
-const goal = require("../models/goal");
 router.get("/list", async (req, res) => {
   try {
     const goals = await Goal.find();

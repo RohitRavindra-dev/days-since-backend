@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(timeLog);
 app.use("/api/goals", goalsRoutes);
-app.use("/api/goal-management", goalsRoutes);
+app.use("/api/goal-management", managementRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`App is running on PORT: ${process.env.PORT}`);

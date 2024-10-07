@@ -5,10 +5,6 @@ const goalSchema = new mongoose.Schema({
     required: true,
     type: String,
   },
-  goalId: {
-    required: true,
-    type: String,
-  },
   currentStreak: {
     required: true,
     type: Number,
